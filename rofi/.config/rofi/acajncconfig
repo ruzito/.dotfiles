@@ -1,0 +1,3 @@
+rofi.theme: /usr/share/rofi/themes/Monokai.rasi
+rofi.sidebar-mode: true
+rofi.modi: Test:window.sh,run,drun

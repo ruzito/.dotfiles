@@ -1,0 +1,11 @@
+configuration {
+   modi: "drun,window,run,keys";
+   display-window: "Windows";
+   display-drun: "Apps";
+   display-run: "Commands";
+//   theme: "Community/sidetab-adapta";
+//   theme: "Community/slate";
+   theme: "My/dracula";
+   sidebar-mode: true;
+   show-icons: true;
+}
