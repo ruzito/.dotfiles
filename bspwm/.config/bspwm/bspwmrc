@@ -4,10 +4,10 @@
 sxhkd ~/.config/sxhkd/sxhkdrc.bspwm &
 picom &
 nitrogen --restore &
-./.config/bspwm/panel.sh &
+
+~/.config/bspwm/panel.sh &
 
 # xsetroot -cursor_name left_ptrz
-
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
