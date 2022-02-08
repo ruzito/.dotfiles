@@ -1,0 +1,79 @@
+# add_newline = false
+
+# format = '''
+# [┌\[ ](bold bright-green)$directory$rust$package[\]](bold bright-green)
+# [└─$character─>](bold bright-green) '''
+
+# format = '''
+# [ $directory](bg:bright-green fg:black bold)[](bold bright-green)${custom.git}${custom.lang}[ ](bold bg:bright-green fg:black)[ ](bold bright-green)
+# $character$test'''
+
+# format = '''
+# [ $directory ](bg:#ffaa00 fg:black bold)[  ](bold fg:#ffaa00 bg:black)([  ](bold fg:black bg:bright-green)[${custom.git} ](bg:bright-green fg:black))[  ](bold fg:bright-green bg:black)([  ](bold fg:black bg:blue)[$rust$cmake$nodejs$lua$java ](bg:blue fg:black)[  ](bold blue))
+# $status$character$test'''
+
+# format = '''
+# [ $directory ](fg:black bg:bright-green bold)[](fg:bright-green bg:none)(
+# [ $git_branch ](fg:black bg:blue bold)[](fg:blue bg:none)([](fg:blue bg:none)[ $git_commit ](fg:black bg:blue bold)[](fg:blue bg:none))([](fg:blue bg:none)[ $git_status ](fg:black bg:blue bold)[](fg:blue bg:none))([](fg:blue bg:none)[ $git_metrics ](fg:black bg:blue bold)[](fg:blue bg:none))  )
+# $status$character$test'''
+
+format = '''($status
+
+)([ $git_branch ](fg:black bg:blue bold)[](fg:blue bg:none)([](fg:blue bg:none)[ $git_commit ](fg:black bg:blue bold)[](fg:blue bg:none))([](fg:blue bg:none)[ $git_status ](fg:black bg:blue bold)[](fg:blue bg:none))([](fg:blue bg:none)[ $git_metrics ](fg:black bg:blue bold)[](fg:blue bg:none))
+)[ $directory ](fg:black bg:bright-green bold)[](fg:bright-green bold) '''
+
+# https://www.nerdfonts.com/cheat-sheet
+# search: pl- ple- square
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+
+[status]
+style = "bg:red fg:black bold"
+map_symbol = true
+format = '[ $common_meaning$signal_name $int ]($style)'
+disabled = false
+
+[directory]
+format = '$path$read_only'
+#style = 'bg:bright-green fg:black bold'
+truncation_length = 10
+truncation_symbol = '…/'
+home_symbol = ' '
+
+[directory.substitutions]
+"/mnt/hdd" = " "
+" /HDD" = " "
+
+[git_branch]
+format = '$symbol $branch( [](fg:blue bg:black)[](fg:blue bg:black) $remote_name $symbol $remote_branch)'
+# always_show_remote = true
+symbol = ''
+
+[git_commit]
+# only_detached = false
+format = '($tag ) $hash'
+tag_disabled = false
+tag_symbol = ''
+
+[git_status]
+format = '$all_status$ahead_behind'
+ahead = ' '
+diverged = ' '
+behind = ' '
+conflicted = ' ${count}'
+staged = ' '
+modified = ' '
+untracked = ' '
+
+[git_metrics]
+disabled = true
